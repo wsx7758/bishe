@@ -1,0 +1,68 @@
+
+@import '../../less/mixin.less';
+.red{
+    color: red;
+}
+.regCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    .pt(64);
+    .emailCode{
+        .pt(20);
+        .pb(4);
+        .w(295);
+        display: flex;
+        justify-content: center;
+        .emailCodeL{
+            .w(180);
+            .pt(26);
+            .pb(4);
+        }
+        .emailCodeR{
+            .pt(40);
+        }
+    }
+    .usInfo{
+        .pt(26);
+        .pb(4);
+        .w(295); 
+        // .h(40);
+        // .lh(40);
+        position: relative;
+        
+    }
+    input{
+            .pt(10);
+            .pl(5);
+            .pb(15);
+            border: none; 
+            outline: none;
+            width: 100%;
+            height: 100%;
+        }
+    .usInfo::after{
+        content: " ";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        border-bottom: 1px solid #d9d9d9
+    }
+        p{
+        .fs(13);
+        .mt(25);
+    }
+    
+    .loginNow{
+        .mt(30);
+        .w(295);
+        .lh(40);
+        .fs(16);
+        font-weight:bold; 
+        border-radius: 7px;
+        background-color: #F6D631; 
+    }
+}

@@ -1,0 +1,240 @@
+@import '../../less/mixin.less';
+@import '../../less/anm.css';
+.carlist{
+    header{
+        .h(60);
+        background: #F6D631;
+        position: fixed;
+        .t(0);
+        .l(0);
+        .lh(60);
+        .r(0);
+        .fs(22);
+        z-index: 11;
+    }
+    main{
+        .mt(60);
+        // .mb(50);
+        
+        .pickList{
+            position: fixed;
+            .t(60);
+            .l(0);
+            .r(0);
+            background:#fff;
+            z-index: 12;
+            .pickListUl{
+                width: 100%;
+                display: flex;
+                li{
+                    width: 25%;
+                    .lh(50);
+                    // background: pink;
+                    position: relative;
+                }
+            }
+        }
+        .already{
+            z-index: 12;
+            border-top: 1px solid #ddd;
+            border-bottom:1px solid #ddd;
+            position: fixed;
+            .l(0);
+            .r(0);
+            .t(110);
+            // .w(375);
+            .pr(5);
+            .pl(5);
+            // overflow: auto;
+            width: auto;
+            background: #fff;
+            .h(75);
+            div{
+                text-align: left;
+            }
+            ul{
+                // display: flex;
+                width: 100%;
+                overflow: auto;
+                .h(54);white-space:nowrap;
+                li{
+                    // float: left;
+                    display: inline-block;
+                    .w(78);
+                    text-align: center;
+                    position: relative;
+                     z-index: 0;
+                    .lh(40);
+                    .pl(5);
+                    .pr(5);
+                    .mt(5);
+                    .mb(5);
+                    .mr(10);
+                    border: 1px solid #ddd;
+                    p{
+                        position: absolute;
+                        .t(-1);
+                        .r(-1);
+                        .w(12);
+                        .h(12);
+                        .fs(12);
+                        border-radius: 50%;
+                        background: #F6D631;
+                        color: red;
+                        .lh(12);
+                    }
+                }
+            }
+        }
+         .reorder{
+            position: fixed;
+            .l(0);
+            .r(0);
+            .t(111);
+            z-index: 12;
+            border-bottom:1px solid #ddd; 
+            background:rgba(0, 0, 0, 0.4);
+            ul{
+                width: 100%;
+                display: flex;
+                background: #fff;
+                li{
+                    // text-align: left;
+                    .lh(30);
+                    flex: 1;
+                }
+                .lh{
+                    color: #F6D631;
+                }
+            }
+        }
+        .allCar{
+            position: relative;
+            .pb(50);
+            // .h(500);
+            //     overflow: scroll !important;
+            ul{
+                // .h(600);
+                // overflow: auto;
+                li{
+                    .mt(5);
+                    .mb(5);
+                    .pl(5);
+                    .w(370);
+                    // .h(111);
+                    display: flex;
+                    border-bottom: 1px solid skyblue;
+                    // overflow:hidden;
+                    // text-overflow:ellipsis;
+                    // white-space:nowrap;
+                    img{
+                        .w(111);
+                        .h(100);
+                    }
+                    .allCarR{
+                        height: 100%;
+                        .ml(10);
+                        // overflow: hidden;
+                        // text-overflow:ellipsis;
+                        // white-space: nowrap;
+                        div{
+                            text-align: left;
+                            .lh(25);
+                            span{
+                                .fs(14);
+                                color: #ddd;
+                            }
+                        }
+                        .carPrice{
+                            color: red;
+                        }
+                    }
+                }
+            }
+            .nodata{
+                color: #ddd;
+                .mt(6);
+            }
+        }
+        .brand{
+            .pb(60);
+            position: fixed;
+            .r(0);
+            .l(188);
+            .t(0);
+            .b(0);
+            z-index: 13;
+            background: #fff;
+            overflow: auto;
+            .brandTitle{
+                text-align: left;
+                .fs(18);
+                .lh(35);
+                font-weight:700; 
+            }
+            .brandCon{
+                z-index: 111;
+                p{
+                    .pl(20);
+                    text-align: left;
+                    .fs(16);
+                    font-weight:bold;
+                    .lh(30); 
+                    background-color: #F9F9F9
+                }
+                ul{
+                    li{
+                        border-bottom:1px solid #ddd;
+                        display: flex;
+                        align-items: center;
+                        .h(75); 
+                        span{
+                            font-family: 'Arial Normal', 'Arial';
+                            font-weight: 400;
+                            font-style: normal;
+                        }
+                        img{
+                            .h(50);
+                            .w(50);
+                            .ml(20);
+                            .mr(30);
+                        }
+                    }
+                }
+            }
+        }
+        .brandMask{
+            position: fixed;
+            background:rgba(0, 0, 0, 0.4);
+            .l(0);
+            .t(0);
+            .r(0);
+            .b(0);
+        }
+        .sortMask{
+            position: fixed;
+            background:rgba(0, 0, 0, 0.4);
+            .l(0);
+            .t(110);
+            .r(0);
+            .b(0);
+        }
+    }
+    
+        .minpt{
+            .pt(60);
+        }
+        .maxpt{
+            .pt(125);
+        }
+}
+.alredyul::-webkit-scrollbar {
+    display: none;
+}
+.carloc{
+    .w(245);
+    .h(27);
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+}

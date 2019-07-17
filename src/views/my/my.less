@@ -1,0 +1,111 @@
+
+@import '../../less/anm.css';
+@import '../../less/mixin.less';
+.my{
+
+    header{
+        .h(60);
+        background: #F6D631;
+        position: fixed;
+        .t(0);
+        .l(0);
+        .lh(60);
+        .r(0);
+        .fs(22);
+    }
+    main{
+        .setusimg{
+            position: fixed;
+            .b(50);
+            .l(0);
+            .r(0);
+            background: #fff;
+            z-index: 1;
+            >div{
+                .lh(40);
+                border-bottom:1px solid #ddd; 
+            }
+            .fontleft{
+                text-align: left;
+                .pl(10);
+            }
+            .suer{
+                display: flex;
+                div{
+                    flex: 1;
+                }
+            }
+        }
+        // background: #ddd;
+        .pt(60);
+        .myInfo{
+            display: flex;
+            .pt(10);
+            .pl(5);
+            .mb(10);
+            background: #fff;
+            border-bottom:1px solid #ddd; 
+            .myInfoL{
+                .mr(5);
+                img{
+                    .w(75);
+                    .h(75);
+                    border-radius:50%; 
+                }
+            }
+            .myInfoM{
+                .w(278);
+                div{
+                    text-align: left;
+                    .lh(35);
+                }
+            }
+            // .myInfoR{
+            //     .lh(70);
+            // }
+        }
+        .mysee{
+            background: #fff;
+        }
+        .mylike{
+            .pl(5);
+            .pt(10);
+            .pb(10);
+            border-bottom:1px solid #ddd; 
+            display: flex;
+            .mt(10);
+            .mylikeL{
+                img{
+                    .w(20);
+                    .l(20);
+                }
+            }
+            .mylikeM{
+                .w(310);
+                text-align: left;
+                .pl(20);
+            }
+        }
+        .outLogin{
+            .mt(150);
+            .h(40);
+        background-color: #F7CF0D;
+        border-radius: 6px;
+        .fs(18);
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .lh(40);
+        }
+    }
+}
+
+            .usmask{
+                position: fixed;
+                .b(0);
+                .l(0);
+                .r(0);
+                .t(150);
+                background:rgba(0, 0, 0, 0.4);
+                z-index: 0;
+            }

@@ -1,0 +1,65 @@
+
+@import '../../less/mixin.less';
+main{
+    .pt(64);
+    .allCar{
+            ul{
+
+                li{
+                    // z-index: -1;
+                    .mt(5);
+                    .mb(5);
+                    .pl(5);
+                    .w(370);
+                    .h(111);
+                    display: flex;
+                    border-bottom: 1px solid skyblue;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    position: relative;
+                    img{
+                        .w(111);
+                        .h(100);
+                    }
+                    .delete{
+                        position: absolute;
+                        .t(40);
+                        .r(10);
+                        .pr(10);
+                        .pl(10);
+                        .lh(30);
+                        border: 1px solid #ddd;
+                    }
+                    .allCarR{
+                        height: 100%;
+                        .ml(10);
+                        text-overflow:ellipsis;
+                        div{
+                            text-align: left;
+                            .lh(25);
+                            span{
+                                .fs(14);
+                                color: #ddd;
+                            }
+                        }
+                        .carPrice{
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    
+    .carloc{
+        .w(245);
+        .h(27);
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+    }
+    .nothing{
+        .mt(20);
+        color: #ddd;
+    }
+}

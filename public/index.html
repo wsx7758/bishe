@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>my_app</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      html,body,#app{
+        height: 100%;
+        font-size: 16px;
+      }
+      li{
+        list-style: none;
+      }
+    </style>
+    <script type="text/javascript">
+      document.documentElement.style.fontSize=document.documentElement.clientWidth/10+'px';
+      document.addEventListener('plusready', function(){
+   			// console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+   			
+       });
+      mui.init({
+        keyEventBind: {
+            backbutton: true  //关闭back按键监听
+          }
+        });
+        // //首页返回键处理
+        // //处理逻辑：1秒内，连续两次按返回键，则退出应用；
+        var first = null;
+        mui.back = function() {
+            //首次按键，提示  再按一次退出应用
+            if (!first) {
+                first = new Date().getTime();//记录第一次按下回退键的时间
+                mui.toast('再按一次退出应用');//给出提示
+                history.go(-1)//回退到上一页面
+                setTimeout(function() {//1s中后清除
+                    first = null;
+                }, 1000);
+            } else {
+                if (new Date().getTime() - first < 1000) {//如果两次按下的时间小于1s，
+                    plus.runtime.quit();//那么就退出app
+
+        } } };
+         console.log(document.documentElement.style.fontSize)
+   		
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but my_app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div class=""></div>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
